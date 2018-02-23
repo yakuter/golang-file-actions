@@ -1,4 +1,4 @@
-<h3>Simple golang file which contains examples about file actions in golang. To keep it simple I only used golang built-in "os" package.</h3>
+<h3>Simple golang file which contains examples about file actions in golang. To keep it simple I only used golang's built-in "os" package.</h3>
 
 <hr></hr>
 <h3>Lıstedfile actions in the package</h3>
