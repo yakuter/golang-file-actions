@@ -52,7 +52,7 @@ func main () {
 		panic(err)
 	}
 
-	// LIST FILES
+	// LIST FILES IN A DIRECTORY
 	dirname := "."
 	folder, err := os.Open(dirname)
 	if err != nil {
