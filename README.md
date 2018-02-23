@@ -1,7 +1,7 @@
 <h3>Simple golang file which contains examples about file actions in golang. To keep it simple I only used golang's built-in "os" package.</h3>
 
 <hr></hr>
-<h3>Lıstedfile actions in the package</h3>
+<h3>The main.go file contains these file actions:</h3>
 <ul>
 <li>Open file for READ, WRITE, CREATE and APPEND</li>
 <li>Read file content</li>
