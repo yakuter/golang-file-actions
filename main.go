@@ -3,6 +3,7 @@ package main
 import(
 	"fmt"
 	"os"
+	"time"
 )
 
 func main () {
@@ -22,6 +23,19 @@ func main () {
 		O_EXCL   int = syscall.O_EXCL   // used with O_CREATE, file must not exist.
 		O_SYNC   int = syscall.O_SYNC   // open for synchronous I/O.
 		O_TRUNC  int = syscall.O_TRUNC  // if possible, truncate file when opened.
+	*/
+
+	// FILEINFO INTERFACE USED BY OS PACKAGE.
+	// Example: When you open a file with os.OpenFile, you can get file name with file.Name().
+	/*
+	type FileInfo interface {
+		Name() string       // base name of the file
+		Size() int64        // length in bytes for regular files; system-dependent for others
+		Mode() FileMode     // file mode bits
+		ModTime() time.Time // modification time
+		IsDir() bool        // abbreviation for Mode().IsDir()
+		Sys() interface{}   // underlying data source (can return nil)
+	}
 	*/
 
 	// OPEN FOR READ, WRITE OR CREATE
