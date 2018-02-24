@@ -4,7 +4,9 @@
 <h3>The main.go file contains these file actions:</h3>
 <ul>
 <li>Open file for READ, WRITE, CREATE and APPEND</li>
-<li>Read file content</li>
+<li>Learn GID and UID of the user</li>
+<li>Change user of a file with CHOWN</li>
+<li>Read and print file content</li>
 <li>Close file</li>
 <li>Add/append/write new data into a file</li> 
 <li>Change permission of a file with CHMOD</li>

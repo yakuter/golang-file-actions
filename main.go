@@ -9,10 +9,8 @@ func main () {
 
 	// GOLANG FILE ACTIONS
 
-	// CONSTANTS TO OPEN A FILE
+	// CONSTANTS TO USE WHILE OPENING A FILE
 	/*
-	const (
-
 		// Exactly one of O_RDONLY, O_WRONLY, or O_RDWR must be specified.
 		O_RDONLY int = syscall.O_RDONLY // open the file read-only.
 		O_WRONLY int = syscall.O_WRONLY // open the file write-only.
@@ -24,7 +22,6 @@ func main () {
 		O_EXCL   int = syscall.O_EXCL   // used with O_CREATE, file must not exist.
 		O_SYNC   int = syscall.O_SYNC   // open for synchronous I/O.
 		O_TRUNC  int = syscall.O_TRUNC  // if possible, truncate file when opened.
-	)
 	*/
 
 	// OPEN FOR READ, WRITE OR CREATE
@@ -33,6 +30,23 @@ func main () {
 		panic(err)
 	}
 
+	// LEARN UID OR GID OF USER
+	gid := os.Getgid()
+	uid := os.Geteuid()
+
+	fmt.Println(gid) 	// GID
+	fmt.Println(uid)	// UID
+
+	// CHANGE OWNER OF A FILE
+	// needs permission. use "sudo go run main.go" to run
+
+	/*
+	if err := os.Chown(file.Name(), gid, uid); err != nil {
+		panic(err)
+	}
+	*/
+
+	// PRINT FILE CONTENT
 	data := make([]byte, 100)
 	count, err := file.Read(data)
 	if err != nil {
@@ -65,7 +79,7 @@ func main () {
 	}
 
 	// CHDIR
-	newdir := "/etc"
+	newdir := "../"
 	if err := os.Chdir(newdir); err != nil {
 		panic(err)
 	}
