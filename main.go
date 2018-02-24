@@ -39,7 +39,6 @@ func main () {
 
 	// CHANGE OWNER OF A FILE
 	// needs permission. You can use "sudo go run main.go" to run
-
 	if err := os.Chown(file.Name(), gid, uid); err != nil {
 		panic(err)
 	}
@@ -82,11 +81,19 @@ func main () {
 		panic(err)
 	}
 
+	// RENAME FILE OR DIRECTORY
+	oldname := "yakuter"
+	renname := "yakuter2"
+	if err := os.Rename(oldname,renname); err != nil {
+		panic(err)
+	}
+
 	// REMOVE EMPTY FILE OR DIRECTORY
 	removedirname := "yakuter"
 	if err := os.Remove(removedirname); err != nil {
 		panic(err)
 	}
+
 
 	// REMOVE FILE OR DIRECTORY AND ANY CHILDREN IT CONTAINS
 	removealldirname := "yakuter"
@@ -95,14 +102,14 @@ func main () {
 	}
 
 	// CHDIR
-	newdir := "../"
-	if err := os.Chdir(newdir); err != nil {
+	changedir := "../"
+	if err := os.Chdir(changedir); err != nil {
 		panic(err)
 	}
 
 	// LIST FILES IN A DIRECTORY
-	dirname := "."
-	folder, err := os.Open(dirname)
+	listdirname := "."
+	folder, err := os.Open(listdirname)
 	if err != nil {
 		panic(err)
 	}

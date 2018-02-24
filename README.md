@@ -11,6 +11,7 @@
 <li>Add/append/write new data into a file</li> 
 <li>Change permission of a file with CHMOD</li>
 <li>Create directory with MKDIR</li>
+<li>Rename file or directory with RENAME</li>
 <li>Remove empty file or directory with REMOVE</li>
 <li>Remove file or directory with any children it contains with REMOVEALL</li>
 <li>Change working directory with CHDIR</li>
