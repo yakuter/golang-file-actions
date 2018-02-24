@@ -38,13 +38,11 @@ func main () {
 	fmt.Println(uid)	// UID
 
 	// CHANGE OWNER OF A FILE
-	// needs permission. use "sudo go run main.go" to run
+	// needs permission. You can use "sudo go run main.go" to run
 
-	/*
 	if err := os.Chown(file.Name(), gid, uid); err != nil {
 		panic(err)
 	}
-	*/
 
 	// PRINT FILE CONTENT
 	data := make([]byte, 100)
@@ -75,6 +73,24 @@ func main () {
 
 	// CHMOD
 	if err := os.Chmod("read.txt", 0755); err != nil {
+		panic(err)
+	}
+
+	// CREATE DIRECTORY
+	createdirname := "yakuter"
+	if err := os.Mkdir(createdirname,0755); err != nil {
+		panic(err)
+	}
+
+	// REMOVE EMPTY FILE OR DIRECTORY
+	removedirname := "yakuter"
+	if err := os.Remove(removedirname); err != nil {
+		panic(err)
+	}
+
+	// REMOVE FILE OR DIRECTORY AND ANY CHILDREN IT CONTAINS
+	removealldirname := "yakuter"
+	if err := os.RemoveAll(removealldirname); err != nil {
 		panic(err)
 	}
 

@@ -10,6 +10,9 @@
 <li>Close file</li>
 <li>Add/append/write new data into a file</li> 
 <li>Change permission of a file with CHMOD</li>
+<li>Create directory with MKDIR</li>
+<li>Remove empty file or directory with REMOVE</li>
+<li>Remove file or directory with any children it contains with REMOVEALL</li>
 <li>Change working directory with CHDIR</li>
 <li>Open a directory with OPEN</li>
 <li>List files in a directory with READDIR</li>
