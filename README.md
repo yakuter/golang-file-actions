@@ -18,6 +18,9 @@
 <li>Open a directory with OPEN</li>
 <li>List files in a directory with READDIR</li>
 <li>Close directory</li>
+<li>Learn file/directory type</li>
+<li>Learn temp directory with TEMPDIR</li>
+<li>Learn file permissions</li>
 <li>That's all for now...</li>
 </ul>
 
