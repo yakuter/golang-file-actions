@@ -1,6 +1,13 @@
 <h3>Simple golang file which contains examples about file actions in golang. To keep it simple I only used golang's built-in "os" package.</h3>
 
 <hr></hr>
+<h3>How to test:</h3>
+<ul>
+<li>Rename any file you want to use as "main.go"</li>
+<li>Type command "go run main.go"</li>
+</ul>
+
+<hr></hr>
 <h3>The main.go file contains these file actions:</h3>
 <ul>
 <li>Open file for READ, WRITE, CREATE and APPEND</li>
