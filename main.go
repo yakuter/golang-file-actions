@@ -9,8 +9,6 @@ import(
 
 func main () {
 
-	// GOLANG FILE ACTIONS
-
 	// CONSTANTS TO USE WHILE OPENING A FILE
 	/*
 	const (
